@@ -1,0 +1,14 @@
+#!/bin/bash
+
+backup_dir="/home/ec2-user/rrr"
+backup_file="backup_$(date +%Y-%m-%d_%H-%M-%S).tar.gz"
+source_dir="/home/ec2-user/rrr"
+
+# Create backup directory if it doesn't exist
+mkdir -p $rrr
+
+# Create backup file
+"tar -czf $rrr/$backup_file $source_dir"
+
+# Print message
+echo "Backup created successfully at $rrr/$backup_file"
