@@ -1,2 +1,0 @@
-#!/bin/bash
-tail -n 1 "$file" | wc -c | xargs -I {} truncate "$file" -s -{}
